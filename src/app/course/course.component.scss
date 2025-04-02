@@ -1,8 +1,7 @@
-
 .course {
-    text-align: center;
-    width: 390px;
-    margin: 40px auto;
+  text-align: center;
+  width: 390px;
+  margin: 40px auto;
 }
 
 .course-thumbnail {
@@ -14,6 +13,15 @@
 .description-cell {
   text-align: left;
   margin: 10px auto;
+}
+
+.collapsed-detail {
+  display: none;
+}
+
+.table-container {
+  height: 500px;
+  overflow: auto;
 }
 
 .duration-cell {
@@ -62,7 +70,7 @@ mat-paginator {
 }
 
 .mat-column-description {
-  padding-left:20px;
+  padding-left: 20px;
   text-align: left;
 }
 
