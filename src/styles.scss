@@ -1,5 +1,10 @@
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 /* You can add global styles to this file, and also import other style files */
 
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
 
+::ng-deep .mat-calendar-body-cell.highlight-date {
+  background-color: red !important;
+  color: white !important;
+  border-radius: 50%; // pour garder le style rond
+}

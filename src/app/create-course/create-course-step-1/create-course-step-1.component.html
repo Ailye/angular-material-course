@@ -14,11 +14,7 @@
   </mat-radio-group>
 
   <mat-form-field appearance="outline">
-    <mat-select
-      formControlName="category"
-      placeholder="Select category"
-      multiple
-    >
+    <mat-select formControlName="category" placeholder="Select category">
       <mat-optgroup label="Beginners">
         <mat-option value="newprogramming">New to Programming</mat-option>
         <mat-option value="newjavascript">New to Javascript</mat-option>
@@ -28,5 +24,40 @@
       <mat-option value="INTERMEDIATE">Intermediate</mat-option>
       <mat-option value="ADVANCED">Advanced</mat-option>
     </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <input
+      matInput
+      formControlName="releasedAt"
+      placeholder="Release date"
+      [matDatepicker]="releasedAtPicker"
+    />
+
+    <mat-datepicker-toggle
+      matSuffix
+      [for]="releasedAtPicker"
+    ></mat-datepicker-toggle>
+
+    <mat-datepicker [dateClass]="dateClass" #releasedAtPicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-checkbox
+    color="primary"
+    formControlName="downloadsAllowed"
+    [indeterminate]="true"
+  >
+    Downloads allowed ?
+  </mat-checkbox>
+
+  <mat-form-field appearance="outline">
+    <textarea
+      matInput
+      formControlName="longDescription"
+      placeholder="Description"
+      cdkTextareaAutosize
+      cdkAutosizeMinRows="1"
+      cdkAutosizeMaxRows="25"
+    ></textarea>
   </mat-form-field>
 </div>
